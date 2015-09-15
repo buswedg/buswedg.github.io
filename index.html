@@ -184,15 +184,6 @@ d3.csv("data/airroutes.csv", function(flights) { // load airroutes data
 							obj.delay_prop = d.delay_prop;
 							return obj;
 						});
-					var airsentence_data = txt_airports.filter(function(d) { return current.airport == d.airport; }) // filter data by current airport
-						.map(function(d) { // return required dataseries
-							var obj = {};
-							obj.delay_curr = d.delay_curr;
-							obj.delay_trend = d.delay_trend;
-							obj.delay_likely = d.delay_likely;
-							obj.delay_comp = d.delay_comp;
-							return obj;
-						});
 					
 					svg2.selectAll('*').remove();
 					
